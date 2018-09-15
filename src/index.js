@@ -1,9 +1,8 @@
 module.exports = function getZerosCount(number){
-
-var n = 5, counter = 0;
-while (n < number){
-        counter += Math.floor(number/n);
-        n *= 5;
-}
-    return  counter;
+  var zeros = 0, multiplier = 5;
+  while (number > multiplier){
+    zeros += Math.floor(number / multiplier);
+    multiplier *= 5;
+  }
+    return zeros;
 }
